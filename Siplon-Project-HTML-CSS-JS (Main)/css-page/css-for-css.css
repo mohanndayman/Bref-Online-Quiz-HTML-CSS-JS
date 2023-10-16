@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+
+
+  }
+  .homePage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
+      linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
+      /* url(./105874696-1556279627825gettyimages-947895256.jpeg); */
+      url(../images/imageedit_2_8768028467.png);
+      /* url(./young-people-studying-using-laptop.jpg); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: space-around;
+  
+  }
+  
+  .homePage ::before{
+    content: '';
+    position: absolute;
+    top:0;  
+     right:0; /*3SHAN EL ANIMATION */
+    width: 100%;
+    height: 100%;
+    background-image: url(./professional-programmer-working-late-dark-office.jpg);
+    background-image:           url(../images/imageedit_2_8768028467.png);
+
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  animation: showRight 4.1s ease forwards; /* wgt l7d ma ytl3o */
+    animation-delay: 0.7s; 
+     
+   } 
+
+   @keyframes showRight {
+  
+    100% {
+      width: 0;
+    }
+  } 
+
+
+
+
+
+  button {
+        border: 1px solid yellow;
+        width: 10em;
+        position: relative;
+        height: 3.5em;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        transition: 1s;
+        border-radius: 0.3em;
+        font-size: 16px;
+        font-weight: bold;
+        
+      }
+      
+    button::after {
+        
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+        transition: 0.5s;
+        transform-origin: center;
+        
+    }
+    
+    button::before {
+        content: "";
+        transform-origin: center;
+        position: absolute;
+        top: 80%;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+        transition: 0.5s;
+    }
+    
+    button:hover::before, #restart:hover::after {
+        transform: scale(0)
+        
+    }
+    
+    button:hover {
+          color: yellow;
+        box-shadow: inset 0px 0px 25px rgb(176, 11, 105);
+      }
+    
+    
+    button:hover{
+    background-color: rgb(176, 11, 105);
+    }
+    
+  
+  /*
+  buttons dsign
+  */
+
+
+
+
+  /*
+  lanla
+  */
+.firsSec{
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+.first button{
+    color: white;
+}
+.secondSec{
+  background-color: #444;
+    width: 100%;
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*/*/*/*/*/*/**/
+.firstSec{
+    height: 40vh;
+    width: 100%;
+    /* background: */
+    /* url(../images/imageedit_2_8768028467.png) center;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.firstSec img {
+    width: 100%;
+    height:40vh ;
+}
+  
+  .secondSec{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+
+
+
+
+
+
+ul{
+    list-style-type: none;
+    padding: 0%;
+    overflow-y: auto;
+    height: 300px;
+    border: 1px solid yellow;
+    color: white;
+    font-weight: 600;
+}
+li{
+    border: 1px solid yellow;
+    overflow-x: hidden;
+    font-size: 1.5rem;
+    height: 2.7rem;
+    cursor: pointer;
+    padding: 7px;
+    max-width:500px ;
+}
+li:hover{
+    background-color: rgb(176, 11, 105);
+    
+}
+iframe{
+    align-items: center;
+    width: 500px;
+    height: 300px ;
+    border: 0;
+    border: 1px solid yellow;
+}
+.video{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0%;
+
+}
+
+
+section{
+    justify-content: space-between;
+    border: 1px solid yellow;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    color: yellow;
+    padding: 10px;
+}
+.quiz{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}

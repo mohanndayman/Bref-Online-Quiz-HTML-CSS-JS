@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="singup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <h1>Create an Account</h1>
+
+        <form autocomplete="off" onkeyup="return validationFirst()">
+          <div class="form">
+            <input type="text" placeholder="User Name" id="first_input" />
+            <div><span id="first_error"> </span></div>
+          </div>
+        </form>
+
+        <form autocomplete="off" onkeyup="return validationEmail()">
+          <div class="form" id="email_field">
+            <input
+              type="email"
+              placeholder="ُ Enter your email "
+              id="email_input"
+            />
+            <div><span id="email_error"></span></div>
+          </div>
+        </form>
+
+        <form onkeyup="return validationCreate()">
+          <div class="form">
+            <div class="create_pass">
+              <input
+                type="password"
+                placeholder="Enter Password"
+                class="create_password"
+                id="create-password"
+              />
+              <small
+                style="
+                  color: white;
+                  display: flex;
+                  align-items: center;
+                  text-align: center;
+                  margin-top: 5px;
+                "
+              >
+                Please enter atleast 8 character with number, symbol, small and
+                capital letter !
+              </small>
+              <div class="small"><small id="create_error"></small></div>
+            </div>
+          </div>
+        </form>
+
+        <form onkeyup="return checkPassword()">
+          <div class="form">
+            <div class="confirm_pass">
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="create_password"
+                id="confirm-password"
+              />
+              <div><small id="confirm_error"> </small></div>
+            </div>
+          </div>
+        </form>
+
+        <button type="submit" id="button">Sign Up</button>
+
+        <div class="bottom">
+          <a href="login.html" style="color: white; text-decoration: none">
+            Already have an account ? <span style="color: yellow"> Login </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, 	initial-scale=1.0" />
+    <link rel="stylesheet" href="js.css" />
+    <title>Code Quiz</title>
+    <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="/" class="logo"
+          ><img height="70px" src="../images/yellow_logo-removebg-preview.png"
+        /></a>
+
+        <div class="nav__link">
+          <a href="../index.html">
+            <h1 style="color: yellow; padding: 10px">Home</h1></a
+          >
+        </div>
+      </nav>
+    </header>
+    <div class="containerNew">
+      <header>
+        <div>
+          <a href="" id="home">
+            <lord-icon
+              src="https://cdn.lordicon.com/qgltmqni.json"
+              trigger="hover"
+              state="hover-home-2"
+              colors="primary:#000000"
+              style="width: 50px; height: 50px"
+            >
+            </lord-icon>
+          </a>
+        </div>
+
+        <div class="timer">
+          <p><span id="timer"> 0 </span></p>
+        </div>
+      </header>
+
+      <main class="quiz">
+        <div id="quiz-start">
+          <div class="landing" id="start-screen">
+            <!-- <h1 id="top"> 
+					
+					</h1>  -->
+            <h1 style="color: yellow">Welcome to Java Script Quiz</h1>
+            <h2>" Features "</h2>
+
+            <p>5 Question (10 sec each)</p>
+            <p>Get Result any time</p>
+
+            <button id="start">Start Quiz</button>
+          </div>
+        </div>
+
+        <div class="hide" id="questions">
+          <h2 id="question-words"></h2>
+          <div class="options" id="options"></div>
+        </div>
+
+        <div class="hide" id="quiz-end">
+          <h2>All Done!</h2>
+          <p class="fScore">
+            Your final score is: <span id="score-final"> </span> / 5
+          </p>
+          <p>
+            <button id="show" onclick="show()">show Answer</button>
+          </p>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
+      </main>
+    </div>
+    <script>
+      let score = 0;
+      let questions = [
+        {
+          prompt: `Which of the following keywords is used to define a variable in Javascript?`,
+          options: ["var", "let", "Both of 1 & 2", "None Of Above"],
+          answer: "Both of 1 & 2",
+        },
+
+        {
+          prompt: `How do you call a 
+				function named 
+				myFunction?`,
+          options: [
+            "call myFunction()",
+            "myFunction()",
+            "call function myFunction",
+            "Call.myFunction",
+          ],
+          answer: "myFunction()",
+        },
+
+        {
+          prompt: `How does a for loop 
+				start?`,
+          options: [
+            "for (i = 0; i <= 5; i++)",
+            "for (i = 0; i <= 5)",
+            "for i = 1 to 5",
+            " for (i <= 5; i++)",
+          ],
+          answer: "for (i = 0; i <= 5; i++)",
+        },
+
+        {
+          prompt: `In JavaScript, which 
+				of the following is 
+				a logical operator?`,
+          options: ["|", "&&", "%", "/"],
+          answer: "&&",
+        },
+
+        {
+          prompt: `A named element in a 
+				JavaScript program that 
+				is used to store and 
+				retrieve data is a _____.`,
+          options: ["method", "assignment operator", "letiable", "string"],
+          answer: "letiable",
+        },
+      ];
+
+      // Get Dom Elements
+
+      let questionsEl = document.querySelector("#questions");
+      let timerEl = document.querySelector("#timer");
+      let choicesEl = document.querySelector("#options");
+      let startBtn = document.querySelector("#start");
+      let hom = document.getElementById("home");
+
+      // Quiz's initial state
+      let currentQuestionIndex = 0;
+      let time = questions.length * 15;
+      let timerId;
+      // Start quiz and hide frontpage
+
+      function quizStart() {
+        hom.style.display = "none";
+        timerId = setInterval(clockTick, 1000);
+        timerEl.textContent = time;
+        let landingScreenEl = document.getElementById("start-screen");
+        landingScreenEl.setAttribute("class", "hide");
+        questionsEl.removeAttribute("class");
+        getQuestion();
+      }
+
+      // Loop through array of questions and
+      // Answers and create list with buttons
+      function getQuestion() {
+        let currentQuestion = questions[currentQuestionIndex];
+        let promptEl = document.getElementById("question-words");
+        promptEl.textContent = currentQuestion.prompt;
+        choicesEl.innerHTML = "";
+        currentQuestion.options.forEach(function (choice, i) {
+          let choiceBtn = document.createElement("button");
+          choiceBtn.setAttribute("value", choice);
+          choiceBtn.textContent = i + 1 + ". " + choice;
+          choiceBtn.onclick = questionClick;
+          choicesEl.appendChild(choiceBtn);
+        });
+      }
+
+      // Check for right answers and deduct
+      // Time for wrong answer, go to next question
+      function questionClick() {
+        if (this.value == questions[currentQuestionIndex].answer) {
+          ++score;
+        }
+        sessionStorage.setItem(`answer${[currentQuestionIndex]}`, this.value);
+
+        currentQuestionIndex++;
+        if (currentQuestionIndex === questions.length) {
+          quizEnd();
+        } else {
+          getQuestion();
+        }
+      }
+
+      // End quiz by hiding questions,
+      // Stop timer and show final score
+
+      function quizEnd() {
+        hom.style.display = "inherit";
+        clearInterval(timerId);
+        let endScreenEl = document.getElementById("quiz-end");
+        endScreenEl.removeAttribute("class");
+        let finalScoreEl = document.getElementById("score-final");
+        finalScoreEl.textContent = score;
+        questionsEl.setAttribute("class", "hide");
+      }
+
+      // End quiz if timer reaches 0
+
+      function clockTick() {
+        time--;
+        timerEl.textContent = time;
+        if (time <= 0) {
+          quizEnd();
+        }
+      }
+
+      startBtn.onclick = quizStart;
+      function show() {
+        const tab = window.open("show-answer-for-js.html", "_blank");
+      }
+    </script>
+  </body>
+</html>

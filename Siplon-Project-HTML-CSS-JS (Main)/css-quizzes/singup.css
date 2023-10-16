@@ -1,0 +1,160 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.4s;
+    font-family: 'Tilt Neon', sans-serif;
+}
+body {
+    width: 100vw;
+    background-color:#444;
+}
+.container {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+.card-container {
+    width: 450px;
+    max-width: 90%;
+    padding: 40px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+}
+h1 {
+    color:yellow ;
+    padding-bottom: 25px;
+    }
+
+.card-container form{
+    width: 95%;
+}
+        
+.card-container input {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 40px;
+    font-size: medium;
+    border: 4px solid yellow;
+   
+}
+
+.form{ 
+   
+    margin-top: 10px;
+
+}
+
+#first_error{
+    margin-top: 2px;
+    padding-left: 15px;
+    color:red;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#last_error{
+    margin-top: 2px;
+    padding-left: 15px;
+    color:red;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#email_error{
+    margin-top: 2px;
+    padding-left: 15px;
+    color:RED;
+    font-weight: bold;
+    font-size: 14px;
+    }
+
+
+.create_pass {
+    width: 100%;
+    position: relative;
+    margin-bottom: 19px;
+   
+    }
+
+.form i {
+  position: absolute;
+  right: 15px;
+  top: 40%;
+  color:rgb(41, 38, 38);
+  transform:translateY(-50%);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bolder;
+    }
+
+.confirm_pass {
+    width: 100%;
+    position: relative;
+    }
+
+#create_error{
+    margin-top: 2px;
+    color:red;
+    font-weight: bold;
+    font-size: 14px;
+     }
+
+#confirm_error{
+    margin-top: 2px;
+    padding-left: 15px;
+    color:red;
+    font-weight: bold;
+    font-size: 14px;
+}
+.small{
+    padding-left: 15px;
+
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#button {
+    background-color:yellow;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: none;
+    width: 40%;
+    max-width: 60%;
+    cursor: pointer;
+    font-size: large;
+}
+
+#button:hover{
+    background-color: #EEEEEE
+}
+
+.bottom>a{
+    color: white;
+    font-size: 15px;
+    text-decoration: underline;
+    padding-top: 10px; 
+   
+}
+
+.bottom span{
+    color: white;
+    font-size: 20px;
+}

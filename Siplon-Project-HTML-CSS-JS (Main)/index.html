@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Simplon-Project-HTML-CSS-JS-Main</title>
+  </head>
+  <body>
+    <!-- navBar -->
+    <header>
+      <nav class="nav">
+        <a href="/" class="logo"
+          ><img height="70px" src="./images/yellow_logo-removebg-preview.png"
+        /></a>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+
+        <div  class="nav__link hide">
+          <a href="#">Home</a>
+          <a id="signupAtag" href="./javascript-quizzes/signup.html">Signup</a>
+          <a id="signinAtag">Signin</a>
+        </div>
+      </nav>
+    </header>
+    <!-- navBar -->
+    <!-- homePage -->
+    <div class="homePage animate__fadeInRight animate__animated">
+      <div class="welcome">
+        <div class="text">
+          <h2>Welcome ...</h2>
+          <p>
+            <span style="color: #fafe01">"</span> Sharpen your coding skills
+            with our online quiz for web developers. Test your knowledge, solve
+            coding challenges, and level up your expertise. Dive into a dynamic
+            quiz experience designed to enhance your web development prowess.
+            Challenge yourself and conquer the world of web development with our
+            engaging online quiz <span style="color: #fafe01">!"</span>
+          </p>
+        </div>
+        <div class="buttons">
+        <a href= #sectionTWO>  <button>Improve Your Skills</button></a>
+         <a href="#up"><button>Start Quiz</button></a> 
+        </div>
+      </div>
+    </div>
+    <!-- homePage -->
+    <div class="cardSection" id="sectionTWO" >
+        <div class="blank">
+            <img style="height: 180px;" src="./images/pngwing.com (2).png">
+            <div class="centerBox">
+  
+                <div class="categoryWrapper">
+                  <h1>Small example what you can do in CSS </h1>
+                  <div class="text-container">
+                    <span style="--color: #deff07; --delay: 0s">C</span>
+                    <span style="--color: #560843; --delay: 0.25s">H</span>
+                    <span style="--color: #10256a; --delay: 0.5s">E</span>
+                    <span style="--color: #6d1e8f; --delay: 1s">C</span>
+                    <span style="--color: #eef60b; --delay: 1.25s">K</span>
+                    <span style="--color: #eef60b; --delay: 1.25s">-</span>
+                    <span style="--color: #81520b; --delay: 1.5s">T</span>
+                    <span style="--color: #d1319b; --delay: 1.75s">H</span>
+                    <span style="--color: #9ba312; --delay: 2s">I</span>
+                    <span style="--color: #190c82; --delay: 2.25s">S</span>
+                    <span style="--color: #190c82; --delay: 2.25s">-</span>
+                    <span style="--color: #DA4167; --delay: 2.5s">O</span>
+                    <span style="--color: #af1471; --delay: 2.75s">U</span>
+                    <span style="--color: #e6ed28; --delay: 3s">t</span>
+                  </div>                  
+                    
+                </div>
+                
+              </div>
+          <img style="height: 200px;" src="./images/pngwing.com.png">
+        </div>
+        
+        <div class="card" id="up">
+            <div class="face face1" id="red">
+                <div class="content">
+                    <i class="fa-brands fa-html5" style="color: #ce0d0d"></i>
+            <h3 >HTML</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p style="color: black;">
+              HTML, which stands for HyperText Markup Language, is the
+              backbone of web development.
+            </p>
+            <a href="./html-page/html.html" type="button">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="face face1" id="blue">
+          <div class="content">
+            <i class="fa-brands fa-css3" style="color: #005eff"></i>
+            <h3>CSS</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p style="color: black;">
+                CSS, or Cascading Style Sheets, is a powerful styling language
+              that complements HTML to enhance the visual presentation of
+              web pages.
+            </p>
+            <a href="./css-page/html-For-css.html" type="button" id="blueHover">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="face face1" id="yellow">
+          <div class="content">
+            <i class="fa-brands fa-square-js" style="color: #fafe01"></i>
+            <h3>JavaScript</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p style="color: black;">
+                JavaScript, often abbreviated as JS, is a dynamic and
+              versatile programming language that adds interactivity and
+              functionality to web pages.
+            </p>
+            <a href="./js-page/html-for-js.html" type="button">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--footer-->
+    <footer id="footer">
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              <span class="logo_name"><img style="height: 100px;" src="./images/yellow_logo-removebg-preview.png"></span>
+            </div>
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Get started</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#">App design</a></li>
+              <li><a href="#">Web design</a></li>
+              <li><a href="#">Logo design</a></li>
+              <li><a href="#">Banner design</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Prefrences</a></li>
+              <li><a href="#">Purchase</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Courses</li>
+              <li><a href="#">HTML & CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">Photography</a></li>
+              <li><a href="#">Photoshop</a></li>
+            </ul>
+            
+          </div>
+        </div>
+       
+      </footer>
+    <!--footer--> <script src="index.js"></script>
+  </body>
+</html>

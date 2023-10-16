@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="import" href="html-for-css-quiz.html" />
+    <link rel="stylesheet" href="show-ansers.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Your Score: <span id="score"></span>/5</h1>
+      <h3>Question:What does CSS stand for?</h3>
+      <div id="ans0"></div>
+
+      <h3>Question:How can we select an element with a specific ID in CSS?</h3>
+      <div id="ans1"></div>
+
+      <h3>Question:Which HTML attribute is used to define inline styles?</h3>
+      <div id="ans2"></div>
+
+      <h3>Question: How do you insert a comment in a CSS file?</h3>
+      <div id="ans3"></div>
+
+      <h3>Question:Which property is used to change the background color</h3>
+      <div id="ans4"></div>
+      <button><a href="html-for-css-quiz.html"> Try again</a></button>
+    </section>
+    <script>
+      let answer = [
+        "Cascading Style Sheets",
+        "'.'",
+        "class",
+        "/this ia a comment/",
+        "background-color",
+      ];
+      let c = 0;
+      for (let a = 0; a < answer.length; a++) {
+        let yourAns = sessionStorage.getItem(`answer${a}`);
+
+        if (yourAns == answer[a]) {
+          document.getElementById(`
+            ans${a}`).innerHTML = ` Good you\'re right the answer is ${yourAns}`;
+          document.getElementById(`ans${a}`).style.color = "green";
+          c++;
+        } else {
+          document.getElementById(`
+            ans${a}`).innerHTML = `The CORRECT Answer Is (${answer[a]}), but yours was ${yourAns}`;
+          document.getElementById(`ans${a}`).style.color = "red";
+        }
+        document.getElementById("score").innerHTML = c;
+        if (c > 2) {
+        }
+      }
+    </script>
+  </body>
+</html>

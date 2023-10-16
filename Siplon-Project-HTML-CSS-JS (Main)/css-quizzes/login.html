@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <h2 style="color: yellow;"">Login</h2>
+        <!-- Email: -->
+        <form autocomplete="off" onkeyup="return validationEmail()">
+          <input type="email" placeholder="Email Address" id="email_input" />
+          <div><span id="email_error"></span></div>
+        </form>
+        <!-- password: -->
+        <form onkeyup="return validationPass()">
+          <div class="form">
+            <div class="create_pass">
+              <input
+                type="password"
+                placeholder="Password"
+                class="create_password"
+                id="password"
+              />
+            </div>
+            <div class="small"><small id="error_pass"></small></div>
+          </div>
+        </form>
+        <!-- Submit Button -->
+
+        <button type="submit" id="Login" onclick="myFunction()" ">Login</button>
+
+        <a href="signup.html" style="    text-decoration: none;
+        "> To create an account </a>
+      </div>
+    </div>
+
+    <script src="login.js">
+
+              function myFunction() {
+              window.history.back();//instead of back .go(-1)-->the number of page you want to go back in history
+      }
+    </script>
+  </body>
+</html>

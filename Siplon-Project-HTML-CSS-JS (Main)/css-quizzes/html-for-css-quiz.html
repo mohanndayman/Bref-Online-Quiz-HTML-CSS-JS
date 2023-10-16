@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, 	initial-scale=1.0" />
+    <link rel="stylesheet" href="css-for-css-quiz.css" />
+    <title>Code Quiz</title>
+    <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="/" class="logo"
+          ><img height="70px" src="../images/yellow_logo-removebg-preview.png"
+        /></a>
+
+        <div class="nav__link">
+          <a href="../index.html">
+            <h1 style="color: yellow; padding: 10px">Home</h1></a
+          >
+        </div>
+      </nav>
+    </header>
+    <div class="containerNew">
+      <header>
+        <div>
+          <a href="" id="home">
+            <lord-icon
+              src="https://cdn.lordicon.com/qgltmqni.json"
+              trigger="hover"
+              state="hover-home-2"
+              colors="primary:#000000"
+              style="width: 50px; height: 50px"
+            >
+            </lord-icon>
+          </a>
+        </div>
+
+        <div class="timer">
+          <p><span id="timer"> 0 </span></p>
+        </div>
+      </header>
+
+      <main class="quiz">
+        <div id="quiz-start">
+          <div class="landing" id="start-screen">
+            <!-- <h1 id="top"> 
+					
+					</h1>  -->
+            <h1 style="color: yellow">Welcome to CSS Quiz</h1>
+            <h2>" Features "</h2>
+
+            <p>5 Question (10 sec each)</p>
+            <p>Get Result any time</p>
+
+            <button id="start" style="color: white">Start Quiz</button>
+          </div>
+        </div>
+
+        <div class="hide" id="questions">
+          <h2 id="question-words"></h2>
+          <div class="options" id="options"></div>
+        </div>
+
+        <div class="hide" id="quiz-end">
+          <h2>All Done!</h2>
+          <p class="fScore">
+            Your final score is: <span id="score-final"> </span> / 5
+          </p>
+          <p>
+            <button id="show" onclick="show()">show Answer</button>
+          </p>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
+      </main>
+    </div>
+    <script src="js-for-css.js"></script>
+  </body>
+</html>

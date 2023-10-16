@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="import" href="showAnswers.css" />
+    <link rel="stylesheet" href="showAnswers.css" />
+  </head>
+
+  <body>
+    <section class="container">
+      <h1>Your Score: <span id="score"></span>/5</h1>
+      <h3>
+        Question: Which of the following keywords is used to define a variable
+        in Javascript?
+      </h3>
+      <div id="ans0"></div>
+
+      <h3>Question: How do you call a function named myFunction?</h3>
+      <div id="ans1"></div>
+
+      <h3>Question: How does a for loop start?</h3>
+      <div id="ans2"></div>
+
+      <h3>
+        Question: In JavaScript, which of the following is a logical operator?
+      </h3>
+      <div id="ans3"></div>
+
+      <h3>
+        Question: A named element in a JavaScript program that is used to store
+        and retrieve data is a _____.
+      </h3>
+      <div id="ans4"></div>
+      <button><a href="js-quiz.html"> Try again</a></button>
+    </section>
+    <script>
+      let answer = [
+        "Both of 1 & 2",
+        "myFunction()",
+        "for (i = 0; i <= 5; i++)",
+        "&&",
+        "letiable",
+      ];
+      let c = 0;
+      for (let a = 0; a < answer.length; a++) {
+        let yourAns = sessionStorage.getItem(`answer${a}`);
+
+        if (yourAns == answer[a]) {
+          document.getElementById(
+            `ans${a}`
+          ).innerHTML = `Good you\'re right the answer is ${yourAns}`;
+          document.getElementById(`ans${a}`).style.color = "green";
+          c++;
+        } else {
+          document.getElementById(
+            `ans${a}`
+          ).innerHTML = `The CORRECT Answer Is ${answer[a]}, but yours was ${yourAns}`;
+          document.getElementById(`ans${a}`).style.color = "red";
+        }
+        document.getElementById("score").innerHTML = c;
+        if (c > 2) {
+        }
+      }
+    </script>
+  </body>
+</html>
